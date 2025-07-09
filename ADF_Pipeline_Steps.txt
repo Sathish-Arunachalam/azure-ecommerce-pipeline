@@ -1,0 +1,11 @@
+Step-by-Step Process:
+
+1. Upload Orders.csv to Azure Blob Storage under container named 'raw'
+2. Create Azure SQL Database named 'ecomdb'
+3. Create a table named 'orders' using the provided SQL script
+4. Go to Azure Data Factory > Ingest > Copy Data Tool
+5. Source: Select Blob Storage, choose Orders.csv
+6. Destination: Select Azure SQL Database, pick 'orders' table
+7. Configure mapping, delimiter (comma), and header row
+8. Finish the pipeline and run
+9. Verify with SELECT * FROM orders in Azure Data Studio
